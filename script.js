@@ -1,163 +1,139 @@
-function generateResume() {
+function generateResume(){
 
-  document.getElementById("previewName").innerText = document.getElementById("name").value;
+  document.getElementById("previewName").innerText =
+  document.getElementById("name").value;
 
-  document.getElementById("previewEmail").innerText = document.getElementById("email").value;
+  document.getElementById("previewEmail").innerText =
+  document.getElementById("email").value;
 
-  document.getElementById("previewPhone").innerText = document.getElementById("phone").value;
+  document.getElementById("previewPhone").innerText =
+  document.getElementById("phone").value;
 
-  document.getElementById("previewSummary").innerText = document.getElementById("summary").value;
+  document.getElementById("previewSummary").innerText =
+  document.getElementById("summary").value;
 
-  document.getElementById("previewSkills").innerText = document.getElementById("skills").value;
+  document.getElementById("previewSkills").innerText =
+  document.getElementById("skills").value;
 
-  document.getElementById("previewEducation").innerText = document.getElementById("education").value;
+  document.getElementById("previewEducation").innerText =
+  document.getElementById("education").value;
 
-  document.getElementById("previewProjects").innerText = document.getElementById("projects").value;
+  document.getElementById("previewProjects").innerText =
+  document.getElementById("projects").value;
 
-  document.getElementById("previewExperience").innerText = document.getElementById("experience").value;
+  document.getElementById("previewExperience").innerText =
+  document.getElementById("experience").value;
 
-  document.getElementById("previewCertifications").innerText = document.getElementById("certifications").value;
+  document.getElementById("previewCertifications").innerText =
+  document.getElementById("certifications").value;
 
-  document.getElementById("previewLanguages").innerText = document.getElementById("languages").value;
+  document.getElementById("previewLanguages").innerText =
+  document.getElementById("languages").value;
 }
 
-function generateSummary() {
+function generateSummary(){
 
-  const summary = "Motivated and detail-oriented developer skilled in web development, AI tools, problem solving, and responsive application design.";
-
-  document.getElementById("summary").value = summary;
+  document.getElementById("summary").value =
+  "Motivated developer skilled in AI tools, web development, APIs and responsive UI design.";
 }
 
-function suggestSkills() {
+function suggestSkills(){
 
-  const skills = "HTML, CSS, JavaScript, React.js, Node.js, MongoDB, GitHub, APIs, Responsive Design";
-
-  document.getElementById("skills").value = skills;
+  document.getElementById("skills").value =
+  "HTML, CSS, JavaScript, React.js, Node.js, GitHub, APIs, Responsive Design";
 }
 
-function improveProjects() {
+function improveProjects(){
 
-  const improved = "Developed an AI-powered ATS-friendly resume builder with live preview, multiple templates, and resume analysis features using HTML, CSS, and JavaScript.";
-
-  document.getElementById("projects").value = improved;
+  document.getElementById("projects").value =
+  "Built an AI-powered ATS resume builder with live preview, resume analysis and modern templates.";
 }
 
-function calculateATS() {
+function atsSuggestions(){
 
-  const skills = document.getElementById("skills").value;
+  alert(
+    "Suggested Keywords: Leadership, Communication, Teamwork, APIs, Database Management"
+  );
+}
 
-  const experience = document.getElementById("experience").value;
+function calculateATS(){
 
-  const projects = document.getElementById("projects").value;
+  let score = 80;
 
-  let score = 50;
+  document.getElementById("atsScore").innerText =
+  score + "% ATS Friendly";
 
-  if (skills.length > 20) {
-    score += 15;
-  }
-
-  if (experience.length > 30) {
-    score += 15;
-  }
-
-  if (projects.length > 20) {
-    score += 10;
-  }
-
-  if (skills.includes("JavaScript")) {
-    score += 5;
-  }
-
-  if (skills.includes("React")) {
-    score += 5;
-  }
-
-  document.getElementById("atsScore").innerText = score + "% ATS Friendly";
-
-  document.getElementById("circleValue").innerText = score + "%";
+  document.getElementById("circleValue").innerText =
+  score + "%";
 
   document.getElementById("strengthBar").value = score;
-
-  if (score < 70) {
-    document.getElementById("missingKeywords").innerText = "Add more technical keywords";
-  }
-
-  else {
-    document.getElementById("missingKeywords").innerText = "Good Keyword Optimization";
-  }
-
-  document.getElementById("grammarScore").innerText = "85%";
-
-  document.getElementById("formatCheck").innerText = "Professional";
-
-  document.getElementById("keywordDensity").innerText = "High";
-
-  document.getElementById("readability").innerText = "Excellent";
 }
 
-function atsSuggestions() {
-
-  const recommendations = "Suggested ATS Keywords: Leadership, Teamwork, Communication, APIs, Problem Solving, Responsive Design, Database Management";
-
-  alert(recommendations);
-}
-
-function toggleDarkMode() {
-
-  document.body.classList.toggle("dark-mode");
-}
-
-const template = document.getElementById("templateSelect");
-
-template.addEventListener("change", function () {
-
-  const preview = document.getElementById("resumePreview");
-
-  preview.className = "";
-
-  if (this.value === "blue") {
-    preview.classList.add("template-blue");
-  }
-
-  else if (this.value === "dark") {
-    preview.classList.add("template-dark");
-  }
-
-  else if (this.value === "green") {
-    preview.classList.add("template-green");
-  }
-
-});
-function openLogin() {
+function openLogin(){
 
   document.getElementById("loginModal").style.display = "block";
 }
 
-function closeLogin() {
+function closeLogin(){
 
   document.getElementById("loginModal").style.display = "none";
 }
 
-function openSignup() {
+function openSignup(){
 
   document.getElementById("signupModal").style.display = "block";
 }
 
-function closeSignup() {
+function closeSignup(){
 
   document.getElementById("signupModal").style.display = "none";
 }
 
-function switchToSignup() {
+function switchToSignup(){
 
   closeLogin();
 
   openSignup();
 }
 
-function switchToLogin() {
+function switchToLogin(){
 
   closeSignup();
 
   openLogin();
+}
+
+const template = document.getElementById("templateSelect");
+
+if(template){
+
+  template.addEventListener("change", function(){
+
+    const preview = document.getElementById("resumePreview");
+
+    if(this.value === "blue"){
+
+      preview.style.background =
+      "linear-gradient(to right,#1e3c72,#2a5298)";
+    }
+
+    else if(this.value === "dark"){
+
+      preview.style.background = "#222";
+    }
+
+    else if(this.value === "green"){
+
+      preview.style.background =
+      "linear-gradient(to right,#11998e,#38ef7d)";
+    }
+
+    else{
+
+      preview.style.background =
+      "rgba(255,255,255,0.1)";
+    }
+
+  });
+
 }
