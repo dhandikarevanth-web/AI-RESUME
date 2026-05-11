@@ -1,0 +1,150 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #f5f7fa, #c3cfe2, #e2ebf0, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+header {
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.top-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.form-section,
+.preview-section {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-section:hover,
+.preview-section:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 80px;
+}
+
+button {
+  padding: 12px 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background: linear-gradient(to right, #4776E6, #8E54E9);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.template-blue {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.template-dark {
+  background: #222;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.template-green {
+  background: linear-gradient(to right, #11998e, #38ef7d);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.circle-score {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.tips-section,
+.ai-panel {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.dark-mode {
+  background: #121212;
+  color: white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+  margin-top: 20px;
+}
+
+@media(max-width:900px) {
+
+  .container {
+    flex-direction: column;
+  }
+
+}
