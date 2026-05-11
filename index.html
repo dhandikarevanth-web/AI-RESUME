@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI Resume Builder</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+  <h1>AI Resume Builder</h1>
+  <p>Create Professional ATS-Friendly Resumes Easily</p>
+</header>
+
+<div class="top-buttons">
+  <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  <button onclick="window.print()">Download Resume PDF</button>
+</div>
+
+<div class="container">
+
+  <div class="form-section">
+
+    <h2>Resume Form</h2>
+
+    <input type="text" id="name" placeholder="Full Name">
+
+    <input type="email" id="email" placeholder="Email">
+
+    <input type="text" id="phone" placeholder="Phone Number">
+
+    <textarea id="summary" placeholder="Career Summary"></textarea>
+
+    <button onclick="generateSummary()">AI Summary Suggestion</button>
+
+    <textarea id="skills" placeholder="Skills"></textarea>
+
+    <button onclick="suggestSkills()">AI Skill Suggestions</button>
+
+    <textarea id="education" placeholder="Education"></textarea>
+
+    <textarea id="projects" placeholder="Projects"></textarea>
+
+    <button onclick="improveProjects()">Improve Project Description</button>
+
+    <textarea id="experience" placeholder="Experience"></textarea>
+
+    <textarea id="certifications" placeholder="Certifications"></textarea>
+
+    <textarea id="languages" placeholder="Languages Known"></textarea>
+
+    <select id="templateSelect">
+      <option value="default">Default Template</option>
+      <option value="blue">Blue Professional</option>
+      <option value="dark">Dark Elegant</option>
+      <option value="green">Green Modern</option>
+    </select>
+
+    <button onclick="atsSuggestions()">ATS Skill Recommendations</button>
+
+    <button onclick="calculateATS()">Check ATS Score</button>
+
+    <button onclick="generateResume()">Generate Resume</button>
+
+  </div>
+
+  <div class="preview-section">
+
+    <h2>Live Resume Preview</h2>
+
+    <div id="resumePreview">
+
+      <h1 id="previewName"></h1>
+
+      <p id="previewEmail"></p>
+
+      <p id="previewPhone"></p>
+
+      <h3>Career Summary</h3>
+      <p id="previewSummary"></p>
+
+      <h3>Skills</h3>
+      <p id="previewSkills"></p>
+
+      <h3>Education</h3>
+      <p id="previewEducation"></p>
+
+      <h3>Projects</h3>
+      <p id="previewProjects"></p>
+
+      <h3>Experience</h3>
+      <p id="previewExperience"></p>
+
+      <h3>Certifications</h3>
+      <p id="previewCertifications"></p>
+
+      <h3>Languages</h3>
+      <p id="previewLanguages"></p>
+
+      <h3>ATS Score</h3>
+      <p id="atsScore"></p>
+
+      <div class="circle-score">
+        <span id="circleValue">80%</span>
+      </div>
+
+      <h3>ATS Analysis Report</h3>
+
+      <div id="atsReport">
+        <p>Missing Keywords: <span id="missingKeywords"></span></p>
+        <p>Grammar Score: <span id="grammarScore"></span></p>
+        <p>Resume Format: <span id="formatCheck"></span></p>
+        <p>Keyword Density: <span id="keywordDensity"></span></p>
+        <p>Readability Score: <span id="readability"></span></p>
+      </div>
+
+      <h3>Resume Strength</h3>
+
+      <progress id="strengthBar" value="80" max="100"></progress>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="tips-section">
+
+  <h2>Resume Tips</h2>
+
+  <ul>
+    <li>Use strong action words</li>
+    <li>Keep resume ATS-friendly</li>
+    <li>Add measurable achievements</li>
+    <li>Keep resume concise</li>
+    <li>Use professional templates</li>
+  </ul>
+
+</div>
+
+<div class="ai-panel">
+
+  <h2>AI Resume Suggestions</h2>
+
+  <ul>
+    <li>Add measurable achievements</li>
+    <li>Use action verbs</li>
+    <li>Include technical keywords</li>
+    <li>Keep summary concise</li>
+    <li>Add certifications section</li>
+  </ul>
+
+</div>
+
+<footer>
+  <p>AI Resume Builder © 2026</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
