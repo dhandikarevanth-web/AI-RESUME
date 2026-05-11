@@ -1267,3 +1267,180 @@ button:hover {
   }
 
 }
+/* FULL VIDEO BACKGROUND */
+
+.video-background {
+
+  position: fixed;
+
+  top: 0;
+
+  left: 0;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  z-index: -10;
+}
+
+.background-video {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* DARK OVERLAY */
+
+.video-dark-overlay {
+
+  position: absolute;
+
+  width: 100%;
+
+  height: 100%;
+
+  top: 0;
+
+  left: 0;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.55),
+      rgba(0,0,0,0.65)
+    );
+}
+
+/* GLASS EFFECT ON ALL MAIN SECTIONS */
+
+.hero,
+.form-section,
+.preview-section,
+.card,
+.stat-card,
+.testimonial,
+.tips-section,
+.ai-panel {
+
+  background: rgba(255,255,255,0.10);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  color: white;
+}
+
+/* TEXT COLOR */
+
+.hero p,
+.hero h1,
+.card p,
+.card h3,
+.testimonial p,
+.stat-card p,
+.stat-card h1 {
+
+  color: white;
+}
+
+/* PROFESSIONAL NAVBAR */
+
+.navbar {
+
+  background: rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+
+  padding: 18px 25px;
+}
+
+/* FORM STYLING */
+
+input,
+textarea,
+select {
+
+  background: rgba(255,255,255,0.15);
+
+  color: white;
+
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+input::placeholder,
+textarea::placeholder {
+
+  color: rgba(255,255,255,0.8);
+}
+
+/* PREMIUM BUTTONS */
+
+button {
+
+  background:
+    linear-gradient(
+      to right,
+      #fc466b,
+      #3f5efb
+    );
+
+  color: white;
+
+  border: none;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+button:hover {
+
+  transform: scale(1.06);
+
+  background:
+    linear-gradient(
+      to right,
+      #00c6ff,
+      #0072ff
+    );
+}
+
+/* FLOATING ANIMATION */
+
+.hero-content {
+
+  animation: fadeUp 1.5s ease;
+}
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(50px);
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+/* GLOW EFFECT */
+
+.hero-text h1 {
+
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.5),
+    0 0 25px rgba(0,198,255,0.5);
+}
