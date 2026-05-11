@@ -1,20 +1,19 @@
-# AI Resume Builder
+# ResumeAI Pro
 
-Professional AI-powered Resume Builder website with ATS Analyzer.
+Professional AI-powered Resume Builder Website.
 
 ## Features
 
-- AI Summary Suggestions
-- AI Skill Recommendations
-- ATS Score Checker
-- Resume Strength Meter
-- Multiple Templates
+- AI Resume Suggestions
+- ATS Analyzer
+- Multiple Resume Templates
 - Live Preview
 - Download PDF
-- Dark Mode
-- Certifications Section
-- Languages Section
+- Animated Background Video
+- Login & Signup UI
+- Google / Facebook / LinkedIn Buttons
 - Responsive Design
+- Professional SaaS UI
 
 ## Technologies Used
 
@@ -23,11 +22,15 @@ Professional AI-powered Resume Builder website with ATS Analyzer.
 - JavaScript
 - GitHub Pages
 
-## Future Improvements
+## Upload To GitHub
 
-- Real AI API Integration
-- Login System
-- Database Storage
-- Resume Sharing
-- LinkedIn Import
-- Portfolio Generator
+1. Create repository
+2. Add files:
+   - index.html
+   - style.css
+   - script.js
+   - README.md
+3. Commit changes
+4. Enable GitHub Pages
+
+Your website will become live.
