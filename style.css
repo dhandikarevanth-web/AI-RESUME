@@ -955,3 +955,27 @@ button:hover {
       #0072ff
     );
 }
+.image-wrapper {
+
+  position: relative;
+
+  width: 340px;
+
+  margin: auto;
+}
+
+.main-image {
+
+  width: 100%;
+
+  border-radius: 25px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+
+  animation: floatingImage 5s ease-in-out infinite;
+}
+
+.floating-icon {
+
+  width: 50px;
+}
